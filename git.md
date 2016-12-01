@@ -74,3 +74,18 @@ Create a `.gitattributes` file in the root of your repository
   > checking code out of your repo.
 
 Source: <http://www.davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/>
+
+Convert committed files to a normalized line ending
+---------------------------------------------------
+
+From a clean working directory:
+
+    echo "* text=auto" >.gitattributes
+    rm .git/index     # Remove the index to force Git to
+    git reset         # re-scan the working directory
+    git status        # Show files that will be normalized
+    git add -u
+    git add .gitattributes
+    git commit -m "Introduce end-of-line normalization"
+
+Source: <https://git-scm.com/docs/gitattributes>
