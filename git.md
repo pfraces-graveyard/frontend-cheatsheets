@@ -47,10 +47,10 @@ Source: <http://stackoverflow.com/questions/454734/how-can-one-change-the-timest
 Find files with Windows-like line endings
 -----------------------------------------
 
-    git grep -Il "^M" <commit>
+    git grep -Il "^M" <commit>
 
-  * `-I`: Ignore pattern in binary fiiles
-  * `-l`: List only matching file paths
+*   `-I`: Ignore pattern in binary fiiles
+*   `-l`: List only matching file paths
 
 **WARNING:** `^M` has to be typed with the combination [`Ctrl-V`, `Ctrl-M`]
 
